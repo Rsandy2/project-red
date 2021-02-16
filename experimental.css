@@ -1,0 +1,50 @@
+.left {
+  background-color: var(--red);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 50%;
+}
+
+.right {
+  background-color: var(--pink-red);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 50%;
+  width: 50%;
+}
+
+.bottom-left {
+  background-color: var(--dark-red);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 50%;
+  width: 50%;
+}
+.bottom-right {
+  background-color: var(--light-red);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 50%;
+}
+
+.left p,
+.right p,
+.bottom-left p,
+.bottom-right p {
+  color: var(--black);
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
