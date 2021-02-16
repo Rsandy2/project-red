@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  /*--------------- Color Themes ---------------*/
+
+  --black: #160706;
+  --light-black: #17181b;
+  --alternate: #17141d;
+  --white: #f9f6f5;
+  --light-white: #f7f8fc;
+
+  --red: #982505;
+  --pink-red: #f5918f;
+  --light-red: #d55c5a;
+  --dark-red: #894242;
+
+  /*--------------- Font Details ---------------*/
+
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+/*--------------- Offsets ---------------*/
+
+a,
+ul,
+li,
+div,
+p,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  background-color: var(--alternate);
+}
