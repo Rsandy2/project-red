@@ -3,6 +3,7 @@
   width: 100%;
   height: var(--navigation-bar);
   background: var(--light-black);
+  z-index: 4;
 }
 
 .navigation-items {

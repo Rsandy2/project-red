@@ -13,15 +13,15 @@ section#info {
   grid-template-columns: 400px 1fr;
   grid-gap: 6rem;
   height: 500px; */
-  margin: 0 auto;
 
   /* border-right: 1px solid blue; */
+  margin: 0 auto;
   padding: 40px;
   flex: 1;
-
+  color: var(--black);
+  z-index: 3;
   /* box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); */
   /* background-color: red; */
-  color: black;
 }
 
 .info-items-container {
