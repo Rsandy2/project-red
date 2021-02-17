@@ -6,6 +6,8 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
 }
 
 :root {
@@ -22,11 +24,26 @@
   --light-red: #d55c5a;
   --dark-red: #894242;
 
+  --border-line: #ecf2ff;
+
   /*--------------- Font Details ---------------*/
 
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
+
+  /*--------------- Size Details ---------------*/
+
+  --navigation-bar: 76px;
+  --navigation-spacing: 44px;
+
+  --font-size-small-one: 0.25rem;
+  --font-size-small-two: 0.5rem;
+  --font-size-small-three: 0.75rem;
+
+  --font-size-medium-one: 1rem;
+  --font-size-medium-two: 1.25rem;
+  --font-size-medium-three: 1.5rem;
 }
 
 /*--------------- Offsets ---------------*/
@@ -52,4 +69,5 @@ h6 {
 
 body {
   background-color: var(--alternate);
+  color: var(--light-white);
 }

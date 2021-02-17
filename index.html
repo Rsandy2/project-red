@@ -10,23 +10,31 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="styles.css" />
 
-
     <!-------- Temporary 
         Temporary CSS files will be held here until moderate amount of production is completed. 
         --------->
 
     <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/info.css" />
+    <link rel="stylesheet" href="./css/product.css" />
 
+    <!--------- Google Fonts ----->
+    <link
+      href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!--------------- Nav Bar --------------->
 
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#info">Info</a></li>
-      <li><a href="#feature">Feature</a></li>
-      <li><a href="about">Team</li>
-    </ul>
+    <nav class="navigation">
+      <ul class="navigation-items">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#info">Info</a></li>
+        <li><a href="#feature">Feature</a></li>
+        <li><a href="about">Team</a></li>
+      </ul>
+    </nav>
 
     <!--------------- Home Page --------------->
 
@@ -34,7 +42,57 @@
 
     <!--------------- Project Info--------------->
 
+    <section id="info">
+      <div class="info-container">
+        <div class="info-items-container">
+          <h1 class="info-title">Info</h1>
+          <!--------------- Question --------------->
+          <div class="info-item">
+            <input type="checkbox" checked />
+            <i></i>
+            <div class="item-title">What is Project Red?</div>
+
+            <div class="answer">
+              Spotify Aggregator that allows an individual to cycle through
+              albums and songs of an Artist
+            </div>
+          </div>
+
+          <!--------------- Question --------------->
+          <div class="info-item">
+            <input type="checkbox" checked />
+            <i></i>
+            <div class="item-title">How do I use the feature.</div>
+
+            <div class="answer">
+              <ol>
+                <li>First access the "Feature Panel".</li>
+                <li>Enter an artist you would like to view.</li>
+                <li>
+                  Select through available albums to view related information.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <!--------------- Question --------------->
+          <div class="info-item">
+            <input type="checkbox" checked />
+            <i></i>
+            <div class="item-title">What is this currently built with?</div>
+
+            <div class="answer">HTML & CSS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!--------------- Product Section --------------->
+
+    <section id="feature">
+      <div>
+        <p>Bye</p>
+      </div>
+    </section>
 
     <!--------------- Search Bar --------------->
 
