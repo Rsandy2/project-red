@@ -1,6 +1,5 @@
 .responsive-wrapper {
-  width: 90%;
-  max-width: 1280px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -33,17 +32,21 @@
 .navigation {
   display: flex;
   flex-wrap: wrap;
+  float: left;
+  position: sticky;
+  right: 80px;
 }
 
 .navigation a {
   font-size: 1.125rem;
   margin-left: 1.75rem;
   position: relative;
-  font-weight: 500;
+  /* font-weight: lighter;/ */
   display: inline-block;
   font-size: 1.125rem;
-  color: white;
+  color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* ----------- Underline ------ */

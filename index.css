@@ -40,7 +40,7 @@
   --navigation-bar: 76px;
   --navigation-spacing: 44px;
 
-  --navigation-max-height: 110px;
+  --navigation-max-height: 100px;
   --navigation-min-height: 76px;
   --navigation-height-difference: calc(
     var(--navigation-max-height) - var(--navigation-min-height)
