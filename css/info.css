@@ -16,7 +16,7 @@ section#info {
 
   /* border-right: 1px solid blue; */
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 10px 30px;
   flex: 1;
   color: var(--black);
   z-index: 3;
