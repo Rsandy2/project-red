@@ -25,6 +25,10 @@
       href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/f5aefcf988.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!--------------- Nav Bar --------------->
@@ -43,26 +47,29 @@
     <!--------------- Home Page --------------->
 
     <section id="home">
-      <div class="home-container">
-        <div class="home-header">
-          <span>Project Red</span>
-        </div>
-        <div class="home-information">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
-            quaerat quae quisquam, maiores quia modi cumque doloribus nam sit
-            quasi suscipit in cupiditate. Minus ea vel nobis deserunt velit
-            sapiente.
-          </p>
-        </div>
-        <div class="home-button">
-          <button
-            class="try-now"
-            type="button"
-            onclick="location.href='#feature'"
-          >
-            <a href="#feature">Try Now</a>
-          </button>
+      <div class="home-wrapper">
+        <div class="home-background"></div>
+        <div class="home-container">
+          <div class="home-header">
+            <span>Project Red</span>
+          </div>
+          <div class="home-information">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              quaerat quae quisquam, maiores quia modi cumque doloribus nam sit
+              quasi suscipit in cupiditate. Minus ea vel nobis deserunt velit
+              sapiente.
+            </p>
+          </div>
+          <div class="home-button">
+            <button
+              class="try-now"
+              type="button"
+              onclick="location.href='#feature'"
+            >
+              <a href="#feature">Try Now</a>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -115,15 +122,38 @@
     <!--------------- Product Section --------------->
 
     <section id="feature">
-      <div>
-        <p>Bye</p>
+      <!--------------- Search Bar --------------->
+      <div class="search-container">
+        <div class="search-box"><input type="text" /> <span></span></div>
+      </div>
+      <!--------------- Card Template --------------->
+
+      <div class="card-container">
+        <div class="img-card">
+          <img src="assets/temp-bg.jpg" alt="" />
+          <div class="card-content">
+            <h2>Test Data</h2>
+            <p>Test Data Info</p>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <img src="assets/temp-bg.jpg" alt="" />
+          <div class="card-content">
+            <h2>Test Data</h2>
+            <p>Test Data Info</p>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <img src="assets/temp-bg.jpg" alt="" />
+          <div class="card-content">
+            <h2>Test Data</h2>
+            <p>Test Data Info</p>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!--------------- Search Bar --------------->
-
-    <!--------------- Card Template --------------->
-
     <!--------------- About Us --------------->
     <section id="about"></section>
   </body>

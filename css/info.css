@@ -93,7 +93,7 @@ ul li {
   animation: flipdown 0.5s ease both;
 } */
 
-div {
+div.info-item {
   position: relative;
   padding: 0;
   margin: 0;
@@ -101,15 +101,15 @@ div {
   padding-top: 14px;
 }
 
-div i {
+div.info-item i {
   position: absolute;
   transform: translate(-16px, 0);
   margin-top: 16px;
   right: 0;
 }
 
-div i:before,
-div i:after {
+div.info-item i:before,
+div.info-item i:after {
   content: "";
   position: absolute;
   background-color: var(--pink-red);
@@ -117,17 +117,17 @@ div i:after {
   height: 9px;
 }
 
-div i:before {
+div.info-item i:before {
   transform: translate(-2px, 0) rotate(45deg);
   transition: all 0.3s ease-in;
 }
 
-div i:after {
+div.info-item i:after {
   transform: translate(2px, 0) rotate(-45deg);
   transition: all 0.3s ease-in;
 }
 
-div input[type="checkbox"] {
+div.info-item input[type="checkbox"] {
   position: absolute;
   cursor: pointer;
   width: 100%;
@@ -136,20 +136,21 @@ div input[type="checkbox"] {
   opacity: 0;
 }
 
-div input[type="checkbox"]:checked ~ .answer {
+div.info-item input[type="checkbox"]:checked ~ .answer {
   margin-top: 0;
   max-height: 0;
   opacity: 0;
   transform: translate(0, -40%);
-  transition: all 0.35s ease-in;
+  transition: opacity 0.55s ease-in;
+  transition: translate 5s ease-in;
 }
 
-div input[type="checkbox"]:checked ~ i:before {
+div.info-item input[type="checkbox"]:checked ~ i:before {
   transform: translate(2px, 0) rotate(45deg);
   transition: all 0.3s ease-in;
 }
 
-div input[type="checkbox"]:checked ~ i:after {
+div.info-item input[type="checkbox"]:checked ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
   transition: all 0.3s ease-in;
 }
