@@ -8,6 +8,7 @@
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -18,11 +19,14 @@
   --alternate: #17141d;
   --white: #f9f6f5;
   --light-white: #f7f8fc;
+  --contrast-white: #f2f3f4;
 
   --red: #982505;
   --pink-red: #f5918f;
   --light-red: #d55c5a;
   --dark-red: #894242;
+
+  --pink: #e52e71;
 
   --border-line: #ecf2ff;
 
