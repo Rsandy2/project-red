@@ -4,5 +4,6 @@ section#about {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: white;
+
+  background: linear-gradient(90deg, var(--white), var(--contrast-white));
 }

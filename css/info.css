@@ -4,7 +4,9 @@ section#info {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: white;
+  /* background-color: var(--white); */
+  background-color: var(--light-red);
+  position: relative;
 }
 
 /* ------------- Containers ------ */
@@ -57,7 +59,7 @@ section#info {
   cursor: pointer;
   font-weight: 400;
   font-size: 1.2rem;
-  color: var(--pink-red);
+  color: #f4f3f3;
   /* margin: 1rem 0rem;
   padding: 5px 0; */
   position: relative;
@@ -66,11 +68,11 @@ section#info {
 }
 
 .answer {
-  color: var(--black);
+  color: var(--light-black);
   position: relative;
   font-family: "Darker Grotesque";
   font-size: var(--font-size-medium-two);
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .answer li {

@@ -6,6 +6,7 @@ section#home {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .home-wrapper {
@@ -15,9 +16,15 @@ section#home {
 }
 
 .home-background {
-  background-image: url("/assets/1093962.jpg");
+  background-image: url("/assets/pexels-francesco-ungaro-1602842.jpg");
+
+  /* background-image: url("https://images8.alphacoders.com/113/1130907.jpg"); */
   background-position: center;
-  width: 50%;
+  width: 100%;
+  /* z-index: -1; */
+  left: 0%;
+
+  position: absolute;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,12 +41,26 @@ section#home {
 
   transform: translate(-50%, -50%);
   transition: all 0.3s;*/
+  position: relative;
+  top: 10%;
+  left: 7%;
   color: var(--contrast-white);
   font-family: "Darker Grotesque";
   padding: 10% 5%;
-  box-sizing: border-box;
-  width: 50%;
-  background: var(--light-red);
+
+  /* height: 100%; */
+  width: 40%;
+
+  /* background: var(--light-red); */
+}
+.home-container::after {
+  content: "";
+  background: linear-gradient(0deg, var(--light-red), var(--contrast-white));
+  position: absolute;
+  width: 8px;
+  height: 20%;
+  top: 20%;
+  left: 60px;
 }
 
 .home-header {
@@ -55,6 +76,8 @@ section#home {
 .home-information p {
   font-size: var(--font-size-medium-two);
   margin-bottom: 2.5vmin;
+  color: inherit;
+  /* color: black; */
 }
 
 .try-now {

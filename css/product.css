@@ -1,5 +1,5 @@
 section#feature {
-  /* background: red; */
+  background: linear-gradient(90deg, var(--gravel-white), var(--black-gravel));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +83,7 @@ section#feature {
 .card-content p {
   opacity: 0;
   transition: all 0.3s;
-  color: var(--light-white);
+  color: var(--red);
 }
 
 .card-content h2 {
