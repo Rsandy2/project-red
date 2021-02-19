@@ -5,5 +5,5 @@ section#about {
   height: 100vh;
   margin: 0;
 
-  background: linear-gradient(90deg, var(--white), var(--contrast-white));
+  background: linear-gradient(0deg, #909090, var(--light-white));
 }

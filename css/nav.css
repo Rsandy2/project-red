@@ -47,6 +47,7 @@
   text-decoration: none;
   margin-left: 32px;
   font-weight: lighter;
+  transition: all 0.65s ease;
 }
 .navigation a {
   font-size: 1.125rem;
@@ -64,10 +65,12 @@
 
 .navigation a:hover:after {
   transform: scalex(1);
+
+  background: linear-gradient(45deg, var(--red), var(--light-red));
 }
 
 .navigation a:after {
-  transition: 0.35s ease;
+  transition: 0.35s ease-in-out;
   content: "";
   display: block;
   width: 100%;
@@ -77,4 +80,9 @@
   position: absolute;
   bottom: -2px;
   left: 0;
+}
+
+.navigation-header a:hover {
+  transition: color 0.65s ease;
+  color: var(--light-red);
 }
