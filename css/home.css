@@ -1,3 +1,9 @@
+/******************************************** 
+
+Home Section CSS
+
+ ********************************************/
+
 section#home {
   display: flex;
   justify-content: center;

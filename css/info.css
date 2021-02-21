@@ -1,3 +1,9 @@
+/******************************************** 
+
+Information Section CSS
+
+ ********************************************/
+
 section#info {
   display: flex;
   justify-content: center;
@@ -103,6 +109,7 @@ div.info-item {
   padding-top: 14px;
 }
 
+/* Arrow Position */
 div.info-item i {
   position: absolute;
   transform: translate(-16px, 0);
@@ -110,6 +117,7 @@ div.info-item i {
   right: 0;
 }
 
+/* Arrow Properties  */
 div.info-item i:before,
 div.info-item i:after {
   content: "";
@@ -119,14 +127,28 @@ div.info-item i:after {
   height: 9px;
 }
 
+/* Arrow Angles */
 div.info-item i:before {
   transform: translate(-2px, 0) rotate(45deg);
-  transition: all 0.3s ease-in;
 }
 
 div.info-item i:after {
   transform: translate(2px, 0) rotate(-45deg);
-  transition: all 0.3s ease-in;
+}
+
+div.info-item input[type="checkbox"]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+
+div.info-item input[type="checkbox"]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+/* All in one section for arrow transitions */
+.transition,
+div.info-item i:before,
+div.info-item:after {
+  transition: all 0.35s ease-in-out;
 }
 
 div.info-item input[type="checkbox"] {
@@ -145,16 +167,6 @@ div.info-item input[type="checkbox"]:checked ~ .answer {
   transform: translate(0, -40%);
   transition: opacity 0.55s ease-in;
   transition: translate 5s ease-in;
-}
-
-div.info-item input[type="checkbox"]:checked ~ i:before {
-  transform: translate(2px, 0) rotate(45deg);
-  transition: all 0.3s ease-in;
-}
-
-div.info-item input[type="checkbox"]:checked ~ i:after {
-  transform: translate(-2px, 0) rotate(-45deg);
-  transition: all 0.3s ease-in;
 }
 
 @keyframes flipdown {

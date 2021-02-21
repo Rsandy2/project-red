@@ -1,9 +1,52 @@
+/******************************************** 
+
+About Section CSS
+
+ ********************************************/
+
 section#about {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-
+  position: relative;
   background: linear-gradient(0deg, #909090, var(--light-white));
+  /* top: -76px; */
+}
+
+/* .about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 76px);
+  width: 100%;
+} */
+
+.heading {
+}
+
+.profiles {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 80px;
+}
+
+.profile {
+  flex-basis: 260px;
+  font-family: "Darker Grotesque";
+}
+
+.profile .profile-img {
+  height: 260px;
+  width: 260px;
+  cursor: pointer;
+  transition: 400ms;
+  filter: grayscale(1);
+}
+
+.profile h5 {
+}
+
+.profile p {
 }

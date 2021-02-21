@@ -1,8 +1,15 @@
+/******************************************** 
+
+Product Section CSS
+
+ ********************************************/
+
 section#feature {
   background: linear-gradient(90deg, var(--gravel-white), var(--black-gravel));
   display: flex;
   justify-content: center;
   align-items: center;
+
   height: 100vh;
   position: relative;
 }
@@ -11,6 +18,7 @@ section#feature {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  position: absolute;
 }
 
 .img-card {
@@ -24,16 +32,25 @@ section#feature {
   overflow: hidden;
 }
 
+/* Modualar selectors for backdrop : Allows you to select each specifically */
+
 .img-card:nth-child(1) {
-  box-shadow: 0 10px 20px rgba(239, 79, 79, 0.2);
+  box-shadow: 0px 7px 20px rgba(255, 255, 255, 0.2);
 }
 
 .img-card:nth-child(2) {
-  box-shadow: 0 10px 20px rgba(239, 79, 79, 0.2);
+  box-shadow: 0 7px 20px rgba(212, 79, 239, 0.2);
 }
 
 .img-card:nth-child(3) {
-  box-shadow: 0 10px 20px rgba(239, 79, 79, 0.2);
+  box-shadow: 0 7px 20px rgba(212, 79, 239, 0.2);
+}
+
+/* ------------------------------------------------------------------------- */
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .img-card::before {
@@ -47,6 +64,8 @@ section#feature {
   transition: all 0.7s;
 }
 
+/* Modualar selectors for color you see in animation : Allows you to select each specifically */
+
 .img-card:nth-child(1)::before {
   background-color: var(--light-red);
 }
@@ -59,11 +78,9 @@ section#feature {
   background-color: var(--light-red);
 }
 
-.img-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+/* ------------------------------------------------------------------------- */
+
+/* ------------- Card Content : What's in the card ------ */
 
 .card-content {
   position: absolute;
@@ -80,10 +97,11 @@ section#feature {
 }
 
 .card-content h2,
-.card-content p {
+.card-content p,
+.modal-btn {
   opacity: 0;
   transition: all 0.3s;
-  color: var(--red);
+  color: var(--gravel-white);
 }
 
 .card-content h2 {
@@ -91,11 +109,13 @@ section#feature {
 }
 
 .card-content p {
-  font-size: 12px;
+  font-size: var(--font-size-small-three);
 }
 
+/* --------------------- Card Animations ----------------------------------- */
+
 .img-card:hover::before {
-  transform: translateY(95%);
+  transform: translateY(98%);
 }
 
 .img-card:hover .card-content {
@@ -103,92 +123,167 @@ section#feature {
 }
 
 .img-card:hover h2,
-.img-card:hover p {
+.img-card:hover p,
+.img-card:hover .modal-btn {
   opacity: 1;
-  transition-delay: 0.3s;
+  transition-delay: 0.4s;
 }
+/* ------------ Search Bar ------------- */
 
-/* ------------ Search ------------- */
-.search-container {
-  /* position: absolute; */
+.form-item {
+  margin: 10px 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   position: absolute;
-  left: 40%;
-  top: 15%;
-  /* transform: translate(-50%, -50%); */
-  z-index: 5;
-  /* height: 100%; */
+  z-index: 3;
+  top: 10%;
 }
 
-.search-box input {
+.form-input {
+  background-color: transparent;
+  border: 2px solid var(--white);
+
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-input:focus {
+  background: var(--contrast-white);
+}
+
+.form-input::placeholder {
+  padding-left: 2px;
+}
+
+/* ----------- Modal Code -------- */
+
+.modal-btn {
+  position: absolute;
+  font-family: "Open Sans";
+  font-size: var(--font-size-medium-one);
+  text-decoration: none;
+
+  height: 50px;
+  width: 240px;
+  top: 80%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   border: none;
-  background: none;
-  z-index: 1;
-  width: 250px;
-
-  transition: all 0.25s ease-in 0.25s;
-  color: transparent;
-  font-size: 1em;
-  line-height: 25px;
-  height: 35px;
-}
-
-.search-box input:hover {
   cursor: pointer;
+
+  background-color: var(--light-white);
+  color: black;
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
 }
 
-.search-box input:hover:focus {
-  cursor: text;
-}
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
 
-.search-box input:hover + span {
-  background: rgba(255, 255, 255, 0.2);
-}
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 
-.search-box input {
-  width: 400px;
-  padding: 0 10px;
-  outline: none;
-  color: var(--light-black);
-  background: none;
-  color: #fff;
-  position: absolute;
-  left: 50%;
-  height: 35px;
-}
-
-.search-box input:focus + span {
-  width: 400px;
-  height: 35px;
-  border-radius: 25px;
-}
-
-/* .search-box input:focus + span::before {
-  width: 2px;
+  transition: 0.6s ease-in-out;
+  overflow: hiden;
+  visibility: hidden;
   opacity: 0;
-  transition: all 0.25s ease-in;
-} */
-
-.search-box input + span {
-  z-index: -1;
-  position: absolute;
-  border: 2px solid #fff;
-  top: 0;
-  width: 400px;
-  height: 35px;
-  transition: all 0.25s ease-in 0.25s;
-  border-radius: 25px;
-  left: 50%;
+  z-index: 8;
 }
 
-/* .search-box input + span::before {
-  transition: all 0.25s ease-in 0.25s;
-  transform-origin: left-top;
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 5px;
-  
-  background: #fff;
-  transform: rotate(45deg) translate(26px, -2px);
+/* This is the content inside the actual modal itself for the left and right sides. Modal-content is the placeholder that has the determinants for the modal size. It contains properties for the modal. Content-info is the holder for the right side of the modal.  */
+
+.modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  max-width: 75vw;
+  max-height: 85vh;
+  width: 90%;
+  height: 90%;
+
+  background-color: var(--light-white);
+  transition: 0.64s ease-in-out;
 }
- */
+.content-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.content-image img {
+  width: auto;
+  height: 100%;
+}
+.content-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  padding: 4rem;
+}
+.content-info h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+.content-info p {
+  font-size: 0.875rem;
+  color: #686868;
+  line-height: 1.5;
+}
+
+/* ------------ Animations for Modal Open & Close ---------- */
+.modal-container:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close-modal {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  line-height: 2.5rem;
+
+  font-size: var(--font-size-medium-two);
+  font-weight: 800;
+  color: var(--light-black);
+
+  z-index: 4;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.close-modal:hover {
+  color: var(--light-red);
+}
+
+/* This is special behavior to control reuse of accordion. CSS selectors control the nesting so above isn't affected.  */
+.content-info .item-title {
+  color: var(--light-black);
+}
+
+.content-info .info-item {
+  margin-top: 10px;
+}

@@ -1,3 +1,9 @@
+/******************************************** 
+
+Navigation Bar Section CSS
+
+ ********************************************/
+
 .responsive-wrapper {
   width: 100%;
   margin-left: auto;
@@ -16,7 +22,7 @@
 
   background-color: var(--alternate);
   box-shadow: var(--shadow-def-normal);
-  z-index: 4;
+  z-index: 6;
 }
 
 .navigation-min {

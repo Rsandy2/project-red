@@ -14,11 +14,11 @@
         Temporary CSS files will be held here until moderate amount of production is completed. 
         --------->
 
-    <link rel="stylesheet" type="text/css" href="./css/nav.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./css/nav.css" />
     <link rel="stylesheet" type="text/css" href="./css/home.css" />
     <link rel="stylesheet" type="text/css" href="./css/info.css" />
     <link rel="stylesheet" type="text/css" href="./css/product.css" />
-    <link rel="stylesheet" type="text/css" href="./css/about.css" />
+    <link rel="stylesheet" type="text/css" href="./css/about.css" /> -->
 
     <!--------- Google Fonts ----->
     <link
@@ -34,7 +34,9 @@
     <!--------------- Nav Bar --------------->
     <header class="navigation-max">
       <div class="navigation-min responsive-wrapper">
-        <div class="navigation-header"><span><a href="index.html">Project Red</a><span></div>
+        <div class="navigation-header">
+          <span><a href="index.html">Project Red</a></span>
+        </div>
         <nav class="navigation">
           <a href="#home">Home</a>
           <a href="#info">Info</a>
@@ -81,7 +83,7 @@
           <!--------------- Question --------------->
           <div class="info-item">
             <input type="checkbox" checked />
-            <i></i>
+            <i class="arrow"></i>
             <div class="item-title">What is Project Red?</div>
 
             <div class="answer">
@@ -114,13 +116,17 @@
 
             <div class="answer">HTML & CSS</div>
           </div>
-           <!--------------- Question --------------->
-           <div class="info-item">
+          <!--------------- Question --------------->
+          <div class="info-item">
             <input type="checkbox" checked />
             <i></i>
             <div class="item-title">How do you plan to scale this?</div>
 
-            <div class="answer">The future will see the usage of the Spotify API to query data, and the usage of NodeJS and React to organize and pass through information. </div>
+            <div class="answer">
+              The future will see the usage of the Spotify API to query data,
+              and the usage of NodeJS and React to organize and pass through
+              information.
+            </div>
           </div>
         </div>
       </div>
@@ -130,23 +136,88 @@
 
     <section id="feature">
       <!--------------- Search Bar --------------->
-      
-      <div class="search-container">
-        <div class="search-box"><input type="text" placeholder="Search"/> <span></span></div>
+
+      <!-- <div class="search-container">
+        <div class="search-box">
+          <input type="text" placeholder="Search" /> <span></span>
+        </div>
+      </div> -->
+      <div class="form-item">
+        <input
+          name="Search"
+          class="form-input"
+          placeholder="Search"
+          autocomplete="off"
+        />
       </div>
+
       <!--------------- Card Template --------------->
 
       <div class="card-container">
         <div class="img-card">
-          <img src="https://i.scdn.co/image/ab67616d0000b273942a0c9ac8f1def7c8805044" alt="" />
+          <img
+            src="https://i.scdn.co/image/ab67616d0000b273942a0c9ac8f1def7c8805044"
+            alt=""
+          />
           <div class="card-content">
             <h2>Album</h2>
             <p>The Search</p>
+
+            <a class="modal-btn" href="#open-modal">View Info</a>
+            <div class="modal-container" id="open-modal">
+              <div class="modal-content">
+                <div class="content-image">
+                  <img
+                    src="https://i.scdn.co/image/ab67616d0000b273942a0c9ac8f1def7c8805044"
+                    alt=""
+                  />
+                </div>
+                <div class="content-info">
+                  <h2>Album info</h2>
+                  <p>
+                    The Search is the fourth studio album by American hip hop
+                    artist NF. It was released on July 26, 2019, through NF Real
+                    Music and Caroline, and was preceded by the singles "Why",
+                    "The Search", "When I Grow Up" and "Time". NF embarked on a
+                    North American tour in September and October 2019 in support
+                    of the album.
+                  </p>
+
+                  <div class="info-item">
+                    <input type="checkbox" checked />
+                    <i class="arrow"></i>
+                    <div class="item-title">Songs</div>
+
+                    <div class="answer">
+                      <ol>
+                        <li>The Search</li>
+                        <li>Leave Me Alone</li>
+                        <li>Change</li>
+                        <li>My Stress</li>
+                        <li>Nate</li>
+                        <li>Time</li>
+                        <li>Returns</li>
+                        <li>When I Grow Up</li>
+                        <li>Only</li>
+                        <li>Let Me Go</li>
+                        <li>Hate Myself</li>
+                        <li>I Miss the Days</li>
+                        <li>No excuses</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <a class="close-modal" href="#feature">X</a>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="img-card">
-          <img src="https://i.scdn.co/image/ab67616d0000b273ee0f38410382a255e4fb15f4" alt="" />
+          <img
+            src="https://i.scdn.co/image/ab67616d0000b273ee0f38410382a255e4fb15f4"
+            alt=""
+          />
           <div class="card-content">
             <h2>Album</h2>
             <p>GO:OD AM</p>
@@ -154,7 +225,10 @@
         </div>
 
         <div class="img-card">
-          <img src="https://i.scdn.co/image/ab67616d0000b273ade26fc245658d700650a912" alt="" />
+          <img
+            src="https://i.scdn.co/image/ab67616d0000b273ade26fc245658d700650a912"
+            alt=""
+          />
           <div class="card-content">
             <h2>Album</h2>
             <p>Pure</p>
@@ -162,7 +236,57 @@
         </div>
       </div>
     </section>
+
     <!--------------- About Us --------------->
-    <section id="about"></section>
+    <section id="about">
+      <div class="about-container">
+        <h1 class="heading">Meet Our Team</h1>
+
+        <div class="profiles">
+          <!--------- Team Member -------------->
+          <div class="profile">
+            <a href="https://github.com/Rsandy2"
+              ><img
+                src="https://avatars.githubusercontent.com/u/56101111?v=4"
+                class="profile-img"
+            /></a>
+
+            <h3 class="user-name">Raejae Sandy</h3>
+            <h5>Project Manager and Team Lead</h5>
+          </div>
+          <!--------- Team Member -------------->
+          <div class="profile">
+            <a href="https://github.com/pdhar2"
+              ><img
+                src="https://avatars.githubusercontent.com/u/57292869?v=4.jpg"
+                class="profile-img"
+            /></a>
+
+            <h3>Peyal Dhar</h3>
+            <h5>Front-End Developer</h5>
+          </div>
+          <!--------- Team Member -------------->
+          <div class="profile">
+            <a href="https://github.com/CoderKonig"
+              ><img
+                src="https://avatars.githubusercontent.com/u/47544380?v=4"
+                class="profile-img"
+            /></a>
+            <h3>Inesh Raj</h3>
+            <h5>Front-End Developer</h5>
+          </div>
+          <!--------- Team Member -------------->
+          <div class="profile">
+            <a href="https://github.com/RafaanAhsan"
+              ><img
+                src="https://avatars.githubusercontent.com/u/55816367?v=4"
+                class="profile-img"
+            /></a>
+            <h3>Rafaan Ahsan</h3>
+            <h5>QA Engineer</h5>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

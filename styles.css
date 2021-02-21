@@ -1,6 +1,761 @@
-/*------------- Navigation
+/******************************************** 
 
-  Section: Navigation Bar
-  Purpose: To style navigation bar.
+Navigation Bar Section CSS
 
-*/
+ ********************************************/
+
+.responsive-wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----------------- Navigation  -----*/
+
+.navigation-max {
+  display: flex;
+  align-items: center;
+  position: sticky;
+
+  height: var(--navigation-max-height);
+  top: calc(var(--navigation-height-difference) * -1);
+
+  background-color: var(--alternate);
+  box-shadow: var(--shadow-def-normal);
+  z-index: 6;
+}
+
+.navigation-min {
+  height: var(--navigation-min-height);
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  position: sticky;
+  right: 80px;
+}
+
+.navigation-header span {
+  font-size: var(--font-size-medium-three);
+  display: block;
+}
+
+.navigation-header a {
+  color: inherit;
+  text-decoration: none;
+  margin-left: 32px;
+  font-weight: lighter;
+  transition: all 0.65s ease;
+}
+.navigation a {
+  font-size: 1.125rem;
+  margin-left: 1.75rem;
+  position: relative;
+  /* font-weight: lighter;/ */
+  display: inline-block;
+  font-size: 1.125rem;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ----------- Underline ------ */
+
+.navigation a:hover:after {
+  transform: scalex(1);
+
+  background: linear-gradient(45deg, var(--red), var(--light-red));
+}
+
+.navigation a:after {
+  transition: 0.35s ease-in-out;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: currentcolor;
+  transform: scalex(0);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.navigation-header a:hover {
+  transition: color 0.65s ease;
+  color: var(--light-red);
+}
+
+/******************************************** 
+
+Home Section CSS
+
+ ********************************************/
+
+section#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.home-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.home-background {
+  background-image: url("/assets/pexels-francesco-ungaro-1602842.jpg");
+
+  /* background-image: url("https://images8.alphacoders.com/113/1130907.jpg"); */
+  background-position: center;
+  width: 100%;
+  /* z-index: -1; */
+  left: 0%;
+
+  position: absolute;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-container {
+  /* width: 40%; */
+  /* position: absolute;
+
+  width: 500px;
+
+  top: 35%;
+  left: 25%;
+  text-align: left;
+
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;*/
+  position: relative;
+  top: 10%;
+  left: 7%;
+  color: var(--contrast-white);
+  font-family: "Darker Grotesque";
+  padding: 10% 5%;
+
+  /* height: 100%; */
+  width: 40%;
+
+  /* background: var(--light-red); */
+}
+.home-container::after {
+  content: "";
+  background: linear-gradient(0deg, var(--light-red), var(--contrast-white));
+  position: absolute;
+  width: 8px;
+  height: 22%;
+  top: 17%;
+  left: 40px;
+}
+
+.home-header {
+  font-weight: bolder;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.home-information {
+  font-weight: lighter;
+}
+
+.home-information p {
+  font-size: var(--font-size-medium-two);
+  margin-bottom: 2.5vmin;
+  color: inherit;
+  /* color: black; */
+}
+
+.try-now {
+  letter-spacing: var(--font-size-small-one);
+  text-transform: uppercase;
+
+  padding: 16px 40px;
+  background-color: var(--alternate);
+  border-radius: none;
+  border: 1.5px solid var(--white);
+  cursor: pointer;
+}
+
+.try-now a {
+  text-decoration: none;
+  font-family: "Open sans";
+  color: var(--contrast-white);
+  font-weight: lighter;
+
+  width: 100%;
+  height: 100%;
+  padding: 0.2rem 0.85rem 0.25rem;
+  position: relative;
+}
+
+.try-now a:hover {
+  background: linear-gradient(90deg, var(--light-white), var(--pink));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+  background-clip: text;
+}
+.try-now:hover {
+  border: 1.5px solid #fff;
+  border-radius: 0;
+  transform: scale(1.01);
+}
+
+/******************************************** 
+
+Information Section CSS
+
+ ********************************************/
+
+section#info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  /* background-color: var(--white); */
+  background-color: var(--light-red);
+  position: relative;
+}
+
+/* ------------- Containers ------ */
+.info-container {
+  /* display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-gap: 6rem;
+  height: 500px; */
+
+  /* border-right: 1px solid blue; */
+  margin: 0 auto;
+  padding: 10px 30px;
+  flex: 1;
+  color: var(--black);
+  z-index: 3;
+  margin-bottom: 20px;
+  /* box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); */
+  /* background-color: red; */
+}
+
+.info-items-container {
+  /* border-right: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  flex: 1;
+}
+
+.info-title {
+  font-family: "Darker Grotesque";
+  color: var(--black);
+  width: 100%;
+  font-size: var(--font-size-medium-three);
+  font-weight: lighter;
+  margin-bottom: -18px;
+}
+
+.info-item {
+  border-bottom: 1px solid var(--border-line);
+  margin: 0.5rem 0;
+  width: 100%;
+  position: relative;
+}
+
+/* ------------- Containers End ------ */
+
+.item-title {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #f4f3f3;
+  /* margin: 1rem 0rem;
+  padding: 5px 0; */
+  position: relative;
+  /* display: block; */
+  width: 100%;
+}
+
+.answer {
+  color: var(--light-black);
+  position: relative;
+  font-family: "Darker Grotesque";
+  font-size: var(--font-size-medium-two);
+  font-weight: 400;
+}
+
+.answer li {
+  margin-left: 1rem;
+}
+
+/* ------------------------ Advanced Animations --------------------- */
+.transition,
+p.answer,
+div.answer:before,
+p.answer,
+div.answer,
+:after {
+  transition: all 0.45s ease-in-out;
+}
+
+/* .flipIn,
+h3,
+ul li {
+  animation: flipdown 0.5s ease both;
+} */
+
+div.info-item {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 14px;
+}
+
+/* Arrow Position */
+div.info-item i {
+  position: absolute;
+  transform: translate(-16px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+
+/* Arrow Properties  */
+div.info-item i:before,
+div.info-item i:after {
+  content: "";
+  position: absolute;
+  background-color: var(--pink-red);
+  width: 3px;
+  height: 9px;
+}
+
+/* Arrow Angles */
+div.info-item i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+
+div.info-item i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+
+div.info-item input[type="checkbox"]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+
+div.info-item input[type="checkbox"]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+/* All in one section for arrow transitions */
+.transition,
+div.info-item i:before,
+div.info-item:after {
+  transition: all 0.35s ease-in-out;
+}
+
+div.info-item input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+
+div.info-item input[type="checkbox"]:checked ~ .answer {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, -40%);
+  transition: opacity 0.55s ease-in;
+  transition: translate 5s ease-in;
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: rotateX(8deg);
+  }
+
+  83% {
+    transform: rotateX(6deg);
+  }
+
+  92% {
+    transform: rotateX(-3deg);
+  }
+
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+/******************************************** 
+
+Product Section CSS
+
+ ********************************************/
+
+section#feature {
+  background: linear-gradient(90deg, var(--gravel-white), var(--black-gravel));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+.img-card {
+  width: 100%;
+  max-width: 320px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Modualar selectors for backdrop : Allows you to select each specifically */
+
+.img-card:nth-child(1) {
+  box-shadow: 0px 7px 20px rgba(255, 255, 255, 0.2);
+}
+
+.img-card:nth-child(2) {
+  box-shadow: 0 7px 20px rgba(212, 79, 239, 0.2);
+}
+
+.img-card:nth-child(3) {
+  box-shadow: 0 7px 20px rgba(212, 79, 239, 0.2);
+}
+
+/* ------------------------------------------------------------------------- */
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  transition: all 0.7s;
+}
+
+/* Modualar selectors for color you see in animation : Allows you to select each specifically */
+
+.img-card:nth-child(1)::before {
+  background-color: var(--light-red);
+}
+
+.img-card:nth-child(2)::before {
+  background-color: var(--light-red);
+}
+
+.img-card:nth-child(3)::before {
+  background-color: var(--light-red);
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* ------------- Card Content : What's in the card ------ */
+
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: all 0.7s;
+}
+
+.card-content h2,
+.card-content p,
+.modal-btn {
+  opacity: 0;
+  transition: all 0.3s;
+  color: var(--gravel-white);
+}
+
+.card-content h2 {
+  letter-spacing: 1px;
+}
+
+.card-content p {
+  font-size: var(--font-size-small-three);
+}
+
+/* --------------------- Card Animations ----------------------------------- */
+
+.img-card:hover::before {
+  transform: translateY(98%);
+}
+
+.img-card:hover .card-content {
+  transform: none;
+}
+
+.img-card:hover h2,
+.img-card:hover p,
+.img-card:hover .modal-btn {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+/* ------------ Search Bar ------------- */
+
+.form-item {
+  margin: 10px 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  z-index: 3;
+  top: 10%;
+}
+
+.form-input {
+  background-color: transparent;
+  border: 2px solid var(--white);
+
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-input:focus {
+  background: var(--contrast-white);
+}
+
+.form-input::placeholder {
+  padding-left: 2px;
+}
+
+/* ----------- Modal Code -------- */
+
+.modal-btn {
+  position: absolute;
+  font-family: "Open Sans";
+  font-size: var(--font-size-medium-one);
+  text-decoration: none;
+
+  height: 50px;
+  width: 240px;
+  top: 80%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border: none;
+  cursor: pointer;
+
+  background-color: var(--light-white);
+  color: black;
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  transition: 0.6s ease-in-out;
+  overflow: hiden;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 8;
+}
+
+/* This is the content inside the actual modal itself for the left and right sides. Modal-content is the placeholder that has the determinants for the modal size. It contains properties for the modal. Content-info is the holder for the right side of the modal.  */
+
+.modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  max-width: 75vw;
+  max-height: 85vh;
+  width: 90%;
+  height: 90%;
+
+  background-color: var(--light-white);
+  transition: 0.64s ease-in-out;
+}
+.content-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.content-image img {
+  width: auto;
+  height: 100%;
+}
+.content-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  padding: 4rem;
+}
+.content-info h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+.content-info p {
+  font-size: 0.875rem;
+  color: #686868;
+  line-height: 1.5;
+}
+
+/* ------------ Animations for Modal Open & Close ---------- */
+.modal-container:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close-modal {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  line-height: 2.5rem;
+
+  font-size: var(--font-size-medium-two);
+  font-weight: 800;
+  color: var(--light-black);
+
+  z-index: 4;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.close-modal:hover {
+  color: var(--light-red);
+}
+
+/* This is special behavior to control reuse of accordion. CSS selectors control the nesting so above isn't affected.  */
+.content-info .item-title {
+  color: var(--light-black);
+}
+
+.content-info .info-item {
+  margin-top: 10px;
+}
+
+/******************************************** 
+
+About Section CSS
+
+ ********************************************/
+
+section#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  background: linear-gradient(0deg, #909090, var(--light-white));
+  /* top: -76px; */
+}
+
+/* .about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 76px);
+  width: 100%;
+} */
+
+.heading {
+}
+
+.profiles {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 80px;
+}
+
+.profile {
+  flex-basis: 260px;
+  font-family: "Darker Grotesque";
+}
+
+.profile .profile-img {
+  height: 260px;
+  width: 260px;
+  cursor: pointer;
+  transition: 400ms;
+  filter: grayscale(1);
+}
+
+.profile h5 {
+}
+
+.profile p {
+}
