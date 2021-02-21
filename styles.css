@@ -236,11 +236,6 @@ section#info {
 
 /* ------------- Containers ------ */
 .info-container {
-  /* display: grid;
-  grid-template-columns: 400px 1fr;
-  grid-gap: 6rem;
-  height: 500px; */
-
   /* border-right: 1px solid blue; */
   margin: 0 auto;
   padding: 10px 30px;
@@ -248,8 +243,6 @@ section#info {
   color: var(--black);
   z-index: 3;
   margin-bottom: 20px;
-  /* box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); */
-  /* background-color: red; */
 }
 
 .info-items-container {
@@ -279,16 +272,22 @@ section#info {
 }
 
 /* ------------- Containers End ------ */
+.info-item {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 14px;
+}
 
 .item-title {
   cursor: pointer;
   font-weight: 400;
   font-size: 1.2rem;
   color: #f4f3f3;
-  /* margin: 1rem 0rem;
-  padding: 5px 0; */
+  /* margin: 1rem 0rem; */
+  padding: 5px 0;
   position: relative;
-  /* display: block; */
   width: 100%;
 }
 
@@ -306,26 +305,10 @@ section#info {
 
 /* ------------------------ Advanced Animations --------------------- */
 .transition,
-p.answer,
 div.answer:before,
-p.answer,
 div.answer,
 :after {
-  transition: all 0.45s ease-in-out;
-}
-
-/* .flipIn,
-h3,
-ul li {
-  animation: flipdown 0.5s ease both;
-} */
-
-div.info-item {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  padding-bottom: 4px;
-  padding-top: 14px;
+  transition: all 0.4s ease-in-out;
 }
 
 /* Arrow Position */
@@ -383,9 +366,9 @@ div.info-item input[type="checkbox"]:checked ~ .answer {
   margin-top: 0;
   max-height: 0;
   opacity: 0;
-  transform: translate(0, -40%);
-  transition: opacity 0.55s ease-in;
-  transition: translate 5s ease-in;
+  transform: translate(0, -20%);
+  transition: opacity 0.45s ease-in;
+  transition: translate 0.5s ease-in;
 }
 
 @keyframes flipdown {
@@ -718,10 +701,8 @@ section#about {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
   position: relative;
   background: linear-gradient(0deg, #909090, var(--light-white));
-  /* top: -76px; */
 }
 
 /* .about-container {
