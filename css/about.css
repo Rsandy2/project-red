@@ -3,16 +3,13 @@
 About Section CSS
 
  ********************************************/
-
 section#about {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
   position: relative;
   background: linear-gradient(0deg, #909090, var(--light-white));
-  /* top: -76px; */
 }
 
 /* .about-container {
@@ -24,6 +21,10 @@ section#about {
 } */
 
 .heading {
+}
+#meetoutteam {
+  text-align: center;
+  color: black;
 }
 
 .profiles {
